@@ -1,9 +1,9 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>InlinePrivateKey</Name>
   <Request>
-    <QueryText>NEAR(BEGIN, OR(RSA, OPENSSH, DSA, EC, PGP), PRIVATE, KEY, n=1)</QueryText>
+    <QueryText>AND(OR(NEAR("BEGIN", "PRIVATE KEY", n=2), NEAR("BEGIN", "RSA PRIVATE KEY", n=3), NEAR("BEGIN", "DSA PRIVATE KEY", n=3), NEAR("BEGIN", "EC PRIVATE KEY", n=3), NEAR("BEGIN", "OPENSSH PRIVATE KEY", n=3)), entity)</QueryText>
     <EnableFql>true</EnableFql>
-    <RefinementFilters>filetype:or("yaml","yml","toml","xml","json","config","ini","inf","cnf","conf","properties","env","dist","txt","sql","log","sqlite","sqlite3","fdb","tfvars","js","cjs","mjs","cs","ts","tsx","ls","es6","es","php","phtml","inc","php3","php5","php7","ps1","psd1","psm1","py","rb","netrc","exports","functions","extra","npmrc","env","bashrc","profile","zshrc","bash_history","zsh_history","sh_history","zhistory","irb_history")</RefinementFilters>
+    <RefinementFilters>filetype:or("txt","config","conf","cfg","ini","env","properties","yml","yaml","xml","json","js","py","rb","sh","bash","zsh","ps1","psm1","psd1","cs","php","java","go","pl","pm","t","pl","pm","t","sql","md","log")</RefinementFilters>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
   </Request>
 </SearchPreset>

@@ -1,7 +1,7 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>JenkinsByName</Name>
   <Request>
-    <QueryText>OR(filename:credentials.xml,filename:jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml)</QueryText>
+    <QueryText>AND(filename:or("credentials.xml","config.xml","hudson.xml"), entity)</QueryText>
     <EnableFql>true</EnableFql>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
   </Request>

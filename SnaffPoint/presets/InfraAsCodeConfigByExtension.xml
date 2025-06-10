@@ -1,9 +1,9 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>InfraAsCodeConfigByExtension</Name>
   <Request>
-    <QueryText>*</QueryText>
+    <QueryText>AND("*", entity)</QueryText>
     <EnableFql>true</EnableFql>
-    <RefinementFilters>filetype:or("cscfg","tfvars")</RefinementFilters>
+    <RefinementFilters>filetype:or("tfvars","tf")</RefinementFilters>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
   </Request>
 </SearchPreset>

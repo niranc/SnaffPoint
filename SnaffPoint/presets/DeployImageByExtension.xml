@@ -1,9 +1,9 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>DeployImageByExtension</Name>
   <Request>
-    <QueryText>*</QueryText>
+    <QueryText>AND("*", entity)</QueryText>
     <EnableFql>true</EnableFql>
-    <RefinementFilters>filetype:or("wim","ova","ovf")</RefinementFilters>
+    <RefinementFilters>filetype:or("vhd","vmdk","vdi","vmem","iso")</RefinementFilters>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
     <HiddenConstraints />
   </Request>

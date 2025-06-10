@@ -1,7 +1,7 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>RubyConfigFiles</Name>
   <Request>
-    <QueryText>OR("database.yml",".secret_token.rb","knife.rb","carrerwave.rb","omiauth.rb")</QueryText>
+    <QueryText>AND(filename:or("database.yml","mongoid.yml","secrets.yml"), entity)</QueryText>
     <EnableFql>true</EnableFql>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
   </Request>

@@ -1,7 +1,7 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>UnattendXML</Name>
   <Request>
-    <QueryText>AND(NOT("*SENSITIVE*DATA*DELETED*"),OR(filename:Autounattend.xml,filename:unattend.xml))</QueryText>
+    <QueryText>AND(filename:equals("unattend.xml"), entity)</QueryText>
     <EnableFql>true</EnableFql>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
   </Request>

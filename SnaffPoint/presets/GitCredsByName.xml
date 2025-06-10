@@ -1,7 +1,7 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>GitCredsByName</Name>
   <Request>
-    <QueryText>filename:OR(".git-credentials")</QueryText>
+    <QueryText>AND(filename:equals(".git-credentials"), entity)</QueryText>
     <EnableFql>true</EnableFql>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
   </Request>

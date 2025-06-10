@@ -1,7 +1,7 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>FtpServerConfigByName</Name>
   <Request>
-    <QueryText>OR(filename:proftpdpasswd,filename:filezilla.xml)</QueryText>
+    <QueryText>AND(filename:or("web.config","ftpusers","ftpd.conf"), entity)</QueryText>
     <EnableFql>true</EnableFql>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
   </Request>

@@ -1,7 +1,7 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>SSHKeysByFileName</Name>
   <Request>
-    <QueryText>filename:OR("id_rsa","id_dsa","id_ecdsa","id_ed25519")</QueryText>
+    <QueryText>AND(filename:or("id_rsa","id_dsa","id_ecdsa","id_ed25519"), entity)</QueryText>
     <EnableFql>true</EnableFql>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
   </Request>

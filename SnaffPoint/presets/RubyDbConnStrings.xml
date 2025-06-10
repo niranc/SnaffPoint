@@ -1,9 +1,9 @@
 <SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>RubyDbConnStrings</Name>
   <Request>
-    <QueryText>"DBI.connect"</QueryText>
+    <QueryText>AND(NEAR("mysql2", "password", n=30), entity)</QueryText>
     <EnableFql>true</EnableFql>
-    <RefinementFilters>filetype:equals("rb")</RefinementFilters>
+    <RefinementFilters>filetype:or("rb","erb","yml")</RefinementFilters>
     <SortList>LastModifiedTime:descending,Rank:descending</SortList>
   </Request>
 </SearchPreset>
