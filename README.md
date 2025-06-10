@@ -8,6 +8,21 @@ There are actually 2 tools:
 - GetBearerToken will perform authentication for you on SharePoint, with the usual GUI and supporting MFA
 - SnaffPoint is CLI only and will do the enumeration itself and find the interesting files
 
+## Modiication from original tool
+This version allows to search for specific entity. 
+
+Use this powershell tip to modify presets entity word to your entity.
+
+```
+$filenames = Get-ChildItem ".\SnaffPoint\presets\" -Recurse select -expand fullname
+```
+```
+foreach ($filename in filenames)
+{
+  (  Get-Content $fileName) -replace 'entity', 'MYSUPERENTITY' | Set-Content $fileName
+}
+```
+
 ### GetBearerToken
 Nothing fancy, run the tool as follows:
 ```
